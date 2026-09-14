@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <title>Hlavní stránka</title>
+    <title>Zelenější Česko - O projektu</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="node_modules/tom-select/dist/css/tom-select.bootstrap5.css">
 </head>
 <body>
-    <nav class="navbar mavbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fa-solid fa-tree text-success me-2"></i>Zelenější Česko
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -20,30 +19,38 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href=""></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""></a></li>
-                    <li class="nav-item"><a class="nav-link" href=""></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">O projektu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aktivity.html">Aktivity</a></li>
+                    <li class="nav-item"><a class="nav-link" href="harmonogram.html">Harmonogram</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    <main class="container my-5">
+        <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+            <h1 class="display-5 fw-bold text-success"><i class="fa-solid fa-seedling me-2"></i>Projekt Zelenější Česko</h1>
+            <p class="col-md-8 fs-4">Společně sázíme stromy, čistíme českou přírodu a obnovujeme přirozenou rozmanitost naší krajiny.</p>
+        </div>
+
+        <section class="my-5 p-4 bg-white rounded shadow-sm border">
+            <h2 class="h4 mb-3"><i class="fa-solid fa-chart-line text-success me-2"></i>Postup realizace projektu 2026</h2>
+            <p class="text-muted">Cílem je vysázet 10 000 stromů a vyčistit 50 km říčních břehů do konce roku.</p>
+            
+            <div class="mb-2 d-flex justify-content-between">
+                <span>Celkový pokrok výsadby</span>
+                <span class="fw-bold text-success">68 %</span>
+            </div>
+            <div class="progress" style="height: 25px;">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                    6 800 / 10 000 stromů
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script src="node_modules/tinymce/tinymce.min.js"></script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelenější Česko - Kontakt a Registrace</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/tom-select/dist/css/tom-select.bootstrap5.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fa-solid fa-tree text-success me-2"></i>Zelenější Česko
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">O projektu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galerie.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aktivity.html">Aktivity</a></li>
+                    <li class="nav-item"><a class="nav-link" href="harmonogram.html">Harmonogram</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 800px;">
+        <h1 class="mb-4 text-center"><i class="fa-solid fa-envelope text-success me-2"></i>Zapojte se & Kontaktujte nás</h1>
+
+        <div class="card shadow-sm p-4">
+            <form action="#" method="post">
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">Váš Email *</label>
+                    <input type="email" class="form-control" id="email" required placeholder="name@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="aktivity-select" class="form-label fw-bold">O jaké aktivity máte zájem? (Multiselect) *</label>
+                    <select id="aktivity-select" name="aktivity[]" multiple required>
+                        <option value="" disabled selected>vyberte...</option>
+                        <option value="vysadba">Výsadba stromů a alejí</option>
+                        <option value="uklid">Čištění lesů a vodních toků</option>
+                        <option value="edukace">Přednášky a práce s dětmi</option>
+                        <option value="organizace">Logistická pomoc při akcích</option>
+                    </select>
+                    <div class="form-text">Můžete vybrat více aktivit najednou. Požadována je alespoň jedna možnost.</div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="zprava" class="form-label fw-bold">Vaše zpráva / Poznámka *</label>
+                    <textarea id="zprava" name="zprava" rows="5" class="form-control" placeholder="Napište nám podrobnosti..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg w-100"><i class="fa-solid fa-paper-plane me-2"></i>Odeslat formulář</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+
+<script>
+    new TomSelect('#aktivity-select', {
+        plugins: ['remove_button'],
+        create: false
+    });
+    tinymce.init({
+        selector: '#zprava',
+        license_key: 'gpl',
+        promotion: false,
+        branding: false,
+        readonly: false,
+        menubar: false,
+        plugins: ['link', 'lists'],
+        toolbar: 'undo redo | bold italic | bullist numlist | link',
+        setup: function (editor) {
+            editor.on('init', function () {
+                var doc = editor.getDoc();
+                var style = doc.createElement('style');
+                style.innerHTML = '.tox-notification { display: none !important; }';
+                doc.head.appendChild(style);
+                editor.mode.set('design');
+            });
+        }
+    });
+</script>
+</body>
+</html>
