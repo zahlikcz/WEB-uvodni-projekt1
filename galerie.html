@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zelenější Česko - Galerie</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -33,37 +33,37 @@
 
         <div id="natureCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#natureCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
 
             <div class="carousel-inner" style="max-height: 500px;">
                 <div class="carousel-item active">
                     <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 object-fit-cover" alt="Les">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded">
                         <h5>Obnova lužních lesů</h5>
                         <p>Vracejme zeleň do naší krajiny.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 object-fit-cover" alt="Strom"> class="d-block w-100 object-fit-cover" alt="Strom">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 object-fit-cover" alt="Strom">
+                    <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded">
                         <h5>Výsadba mlázků</h5>
                         <p>Přes 5 000 nových stromů v tomto roce.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 object-fit-cover" alt="Hory a příroda">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded">
                         <h5>Čisté horské prameny</h5>
                         <p>Ochrana vodních zdrojů a toků.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 object-fit-cover" alt="Luka">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                    <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded">
                         <h5>Květnaté louky</h5>
                         <p>Podpora biodiverzity a včelstev.</p>
                     </div>
@@ -71,14 +71,15 @@
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#natureCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#natureCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
             </button>
         </div>
     </main>
-
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
